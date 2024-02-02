@@ -1,12 +1,14 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
 
 function SignUp() {
+  const navigate = useNavigate();
   return (
-    <div className="grid h-screen grid-flow-col md:grid-cols-2">
-      <div className="flex flex-col">
+    <div className="grid h-screen grid-flow-col md:grid-cols-2 mt-1">
+      <div className="flex flex-col  border-t-[2px] border-teal-400 ml-[30px]">
         <div className="flex-1 text-center w-[25rem] mx-auto flex items-center justify-center flex-col">
           <span className="block mb-2 text-[32px] bg-clip-text text-transparent 
-          bg-gradient-to-r from-blue-600 to-purple-600">
+          bg-gradient-to-r from-blue-600 to-purple-600" onClick={()=>navigate('/')}>
             Welcome to monday.com
           </span>
           <span className="block mb-12 leading-[30px] font-normal">
@@ -26,7 +28,7 @@ function SignUp() {
               Or
               <div className="h-1/2 border border-t-[#d0d4e4] w-full"></div>
             </div>
-            <input className="border-[1px] hover:scale-110 border-blue-400 rounded-[9px] h-10 w-full p-2 cursor-pointer" placeholder="name@company.com" />
+            <input className="border-[1px] hover:border-blue-300 border-blue-600 rounded-[9px] h-10 w-full p-2 cursor-pointer" placeholder="name@company.com" />
             <button type="primary" className="w-full bg-[#0073ea] h-10">
               Continue
             </button>
@@ -51,11 +53,11 @@ function SignUp() {
           </a>
         </div>
       </div>
-      <div className="flex overflow-hidden w-full ml-[120px]">
+      <div className="flex overflow-hidden w-full">
         <img
           src="https://dapulse-res.cloudinary.com/image/upload/monday_platform/signup/signup-right-side-assets-new-flow/welcome-to-monday.png"
           alt=""
-          className="object-cover w-full h-full p-0 m-0"
+          className="object-cover w-screen h-full"
         />
       </div>
     </div>
